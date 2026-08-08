@@ -2,9 +2,14 @@
 
 隕石を避け、できるだけ長く生き残るシンプルなブラウザゲームです。
 
+**Release:** `v1.0.0` (Stable)  
+**Released:** 2026-08-08
+
 ## Play
 
 https://04masaki18.github.io/starfall-dash/
+
+GitHub Pages で公開しています。インストール不要でブラウザからそのままプレイできます。
 
 ## Controls
 
@@ -19,6 +24,16 @@ https://04masaki18.github.io/starfall-dash/
 - 隕石をギリギリでかわすと `NEAR MISS +25`
 - ベストスコアはブラウザの `localStorage` に保存
 - 時間経過で隕石の速度・出現頻度が上昇
+
+## v1.0.0 completion criteria
+
+- タイトル画面からゲームを開始できる
+- PCキーボードとスマホのドラッグ操作に対応
+- 隕石との衝突でゲームオーバーになる
+- スコアとベストスコアを表示・保存できる
+- リトライできる
+- GitHub Pages 上で公開・実プレイ確認済み
+- JavaScript 構文チェックおよびゲームロジックテストを通過
 
 ## Tech
 
@@ -43,6 +58,10 @@ python -m http.server 8080
 ```bash
 npm test
 ```
+
+## Changelog
+
+リリース履歴は [`CHANGELOG.md`](CHANGELOG.md) を参照してください。
 
 ## License
 
