@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#070b1a" />
+  <meta name="description" content="STARFALL DASH - 隕石を避けて限界まで生き残る、1プレイ数分のブラウザゲーム。" />
+  <title>STARFALL DASH</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell" aria-label="STARFALL DASH game">
+    <canvas id="gameCanvas" width="960" height="540" aria-label="ゲーム画面"></canvas>
+
+    <section class="hud" aria-live="polite">
+      <div class="hud-block">
+        <span class="hud-label">SCORE</span>
+        <strong id="scoreValue">000000</strong>
+      </div>
+      <div class="hud-title">STARFALL <span>DASH</span></div>
+      <div class="hud-block hud-right">
+        <span class="hud-label">BEST</span>
+        <strong id="bestValue">000000</strong>
+      </div>
+    </section>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <section id="startOverlay" class="overlay visible">
+      <div class="panel">
+        <p class="eyebrow">ONE MORE RUN?</p>
+        <h1>STARFALL<br><span>DASH</span></h1>
+        <p class="lead">降り注ぐ隕石をかわし、できるだけ長く生き残れ。</p>
+        <button id="startButton" class="primary-button" type="button">START RUN</button>
+        <p class="controls">PC: ← → / A D　·　スマホ: ドラッグ</p>
+      </div>
+    </section>
+
+    <section id="gameOverOverlay" class="overlay">
+      <div class="panel compact">
+        <p class="eyebrow danger">SIGNAL LOST</p>
+        <h2>RUN OVER</h2>
+        <div class="result-grid">
+          <div>
+            <span>SCORE</span>
+            <strong id="finalScore">000000</strong>
+          </div>
+          <div>
+            <span>BEST</span>
+            <strong id="finalBest">000000</strong>
+          </div>
+        </div>
+        <p id="newBest" class="new-best">NEW BEST!</p>
+        <button id="retryButton" class="primary-button" type="button">RETRY</button>
+      </div>
+    </section>
+
+    <button id="soundButton" class="sound-button" type="button" aria-label="サウンド切替" title="サウンド切替">♪</button>
+  </main>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
